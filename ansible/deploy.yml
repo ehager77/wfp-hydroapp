@@ -1,0 +1,11 @@
+---
+- name: deploy branch <{{branch}}> to <{{env}}>
+  hosts: tag_env-{{env}}
+  remote_user: ubuntu
+  gather_facts: false
+  sudo: false
+  tags: tag-deploy
+  tasks:
+    - name: checkout git branch onto specified instance
+      sudo: false # sudo breaks ssh agent forwarding
+      git:  repo=https://source.developers.google.com/p/wfp-hydro-app/r/wfp-hydro-app.git dest=/home/ubuntu/wfp-hydro-app accept_hostkey=yes version={{branch}} force=yes

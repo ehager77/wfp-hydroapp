@@ -118,4 +118,5 @@ When a new instance of WordPress is spun up, it will be set to old defaults of u
 
 ### TODO:
 + consider using restart: true in compose file
+
 + consider running docker-compose detached state, logging to target file
