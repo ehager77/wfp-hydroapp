@@ -1,0 +1,35 @@
+version: "2"
+
+services:
+  hydro-db:
+    restart: always
+    image: mysql:5.7.19
+    ports:
+      - "8081:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=Oujl9bumzd
+      - MYSQL_DATABASE=wp_aquarius_release
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d #init MySQL dump in /data
+    networks:
+      - wordpress-network
+  hydro-app:
+    restart: always
+    image: wordpress:4.8.1
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - hydro-db
+    environment:
+      - WORDPRESS_DB_HOST=hydro-db #refers to hydro-db port
+      - WORDPRESS_DB_USER=root
+      - WORDPRESS_DB_NAME=wp_aquarius_release
+      - WORDPRESS_DB_PASSWORD=Oujl9bumzd
+      - PHP_VERSION=5.6.31
+    networks:
+      - wordpress-network
+networks: #https://docs.docker.com/engine/userguide/networking/#bridge-networks
+  wordpress-network:
+      driver: bridge
