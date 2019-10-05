@@ -1,0 +1,255 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Vars and mixins
+# Default
+# Bootstrap upgrades
+# Header and nav
+# Posts and pages
+# Scroll top button
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Vars and mixins
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Default
+--------------------------------------------------------------*/
+.content {
+  background-color: #f2faff; }
+
+.content_posts {
+  padding: 20px 10%; }
+
+.content_post {
+  background-color: #fff; }
+
+.content_page {
+  background-color: #fff; }
+
+a:hover {
+  text-decoration: none; }
+
+a:focus {
+  text-decoration: none;
+  outline: none; }
+
+/*--------------------------------------------------------------
+## Bootstrap upgrades
+--------------------------------------------------------------*/
+.container_zero {
+  padding: 0; }
+
+.container {
+  width: 100%; }
+
+/*--------------------------------------------------------------
+## Header and nav
+--------------------------------------------------------------*/
+.header {
+  padding: 20px 0;
+  background-color: #2A93FC; }
+
+.header__toggleIcon {
+  position: relative;
+  z-index: 1000;
+  float: left;
+  margin-top: 12px;
+  cursor: pointer; }
+
+.header__toggleIcon_cross .header__toggleIconLine {
+  background-color: #b1b7be; }
+.header__toggleIcon_cross .header__toggleIconLine:first-child {
+  transform: translate(0, 6px) rotate(-45deg); }
+.header__toggleIcon_cross .header__toggleIconLine:nth-child(2) {
+  opacity: 0; }
+.header__toggleIcon_cross .header__toggleIconLine:last-child {
+  transform: translate(0, -8px) rotate(45deg); }
+
+.header__toggleIcon_backward .header__toggleIconLine:first-child {
+  transform: translate(-6px, 1px) rotate(-45deg);
+  width: 18px; }
+.header__toggleIcon_backward .header__toggleIconLine:nth-child(2) {
+  width: 24px; }
+.header__toggleIcon_backward .header__toggleIconLine:last-child {
+  transform: translate(-6px, -1px) rotate(45deg);
+  width: 18px; }
+
+.header__toggleIconLine {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  margin: 5px auto;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms; }
+
+.nav {
+  position: absolute;
+  top: 0;
+  z-index: 200;
+  display: none;
+  width: 80%;
+  background-color: #f2faff; }
+  @media (min-width: 400px) {
+    .nav {
+      width: 320px; } }
+
+.nav__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .nav__menu .menu-item,
+  .nav__menu .page_item {
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -o-transition: all 200ms;
+    transition: all 200ms; }
+    .nav__menu .menu-item a,
+    .nav__menu .page_item a {
+      display: block;
+      padding: 18px;
+      border-bottom: 1px solid #e6eef4;
+      outline: none;
+      text-decoration: none;
+      color: #1d1d26;
+      letter-spacing: 1px;
+      font-size: 16px; }
+    .nav__menu .menu-item:hover,
+    .nav__menu .page_item:hover {
+      background-color: #e2f3ff; }
+  .nav__menu .sub-menu {
+    display: none;
+    list-style: none; }
+    .nav__menu .sub-menu a {
+      background-color: #e2f3ff;
+      padding-left: 35px; }
+
+.navBg {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: #000;
+  opacity: 0.5; }
+
+.header__logo {
+  margin: 0 auto;
+  max-height: 40px; }
+
+@media screen and (max-width: 380px) {
+  .header__logo_wfp {
+    position: absolute;
+    top: 0;
+    right: 15px; } }
+
+/*--------------------------------------------------------------
+## Post box
+--------------------------------------------------------------*/
+.postBox {
+  margin: 0 auto 8% auto;
+  box-sizing: border-box;
+  background: transparent;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(50, 50, 50, 0.4);
+  -moz-box-shadow: 0 2px 2px 0 rgba(50, 50, 50, 0.4);
+  box-shadow: 0 2px 2px 0 rgba(50, 50, 50, 0.4); }
+  .postBox:hover .postBox__bottom {
+    background-color: #009be0; }
+  @media screen and (min-width: 768px) {
+    .postBox {
+      max-width: 768px; } }
+
+.postBox__img {
+  width: 100%;
+  border-radius: 8px 8px 0 0; }
+
+.postBox__top {
+  padding: 15px 10px;
+  border-radius: 8px 8px 0 0;
+  background-color: #fff;
+  color: #1d1d26;
+  font-size: 18px; }
+
+.postBox__bottom {
+  padding: 3% 8px;
+  border-radius: 0 0 8px 8px;
+  background-color: #2A93FC;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  overflow: hidden; }
+
+/*--------------------------------------------------------------
+## Single post and page
+--------------------------------------------------------------*/
+.postContent__img {
+  margin: 0 auto;
+  width: 100%; }
+
+.postContent__titleBox {
+  padding: 15px;
+  width: 100%;
+  background-color: #009be0;
+  color: #fff;
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.6);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.6);
+  box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.6); }
+
+.postContent__title {
+  margin: 0;
+  font-size: 26px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.postContent__content {
+  padding: 10% 0;
+  font-size: 16px; }
+  .postContent__content h1 {
+    font-size: 24px; }
+  .postContent__content h2 {
+    font-size: 22px; }
+  .postContent__content h3,
+  .postContent__content h4,
+  .postContent__content h5,
+  .postContent__content h6 {
+    font-size: 20px; }
+  .postContent__content img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    height: auto !important; }
+  .postContent__content table {
+    width: 100%;
+    margin: 10px 0; }
+  .postContent__content td {
+    border: 1px solid #e2e2e2;
+    padding: 5px; }
+
+.postContent__content_zero {
+  padding: 0; }
+
+/*--------------------------------------------------------------
+## Scroll top button
+--------------------------------------------------------------*/
+.scrollTop {
+  display: none;
+  position: fixed;
+  bottom: 18px;
+  right: 24px;
+  z-index: 9999;
+  padding: 16px 22px;
+  border-radius: 100%;
+  background: #2A93FC;
+  opacity: 0.8;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms; }
+
+/*# sourceMappingURL=style.css.map */

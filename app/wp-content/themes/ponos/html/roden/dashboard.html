@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<meta charset="UTF-8" />
+	<meta name=viewport content="width=700">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/blue_headernorm.css" /> <!-- Стили меню, меню бургера и контейнера -->
+	<link rel="stylesheet" type="text/css" href="css/accout_login.css" />
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container" id="container">
+		<header class="menu">
+			<nav class="navigation effectMove1" id="menu-1">
+				<ul class="navigation__list">
+					<li class="navigation__li">
+						<div id="trigger-effects">
+							<button data-effect="effectMove2" class="navigation__switchCross navigation__switchCross_style"> <!-- Кнопка "Крестик" закрывающая открытую навигацию -->
+								<span></span>
+							</button>
+						</div>
+					</li>
+					<li class="navigation__li"><a href="index.html">Home</a></li>
+					<li class="navigation__li"><a href="#">Choose Language</a>
+						<ul class="navigation__subMenu">
+							<li class="navigation__liLanguage"><a href="#">Spanish</a></li>
+							<li class="navigation__liLanguage"><a href="#">French</a></li>
+						</ul>
+					</li>
+					<li class="navigation__li"><a href="dashboard.html">Dashboard</a></li>
+					<li class="navigation__li"><a href="guides.html">PDF Guides</a></li>
+					<li class="navigation__li"><a href="messages.html">Messages</a></li>
+					<li class="navigation__li"><a href="my_farm.html">My farm</a></li>
+					<li class="navigation__li"><a href="sign_in.html">Log In</a></li>
+					<li class="navigation__li"><a href="sign_up.html">Register</a></li>
+				</ul>
+			</nav>
+
+
+					<!-- Кнопка вызова навигации "Бургер", Центральный заголовок "PONOS", Лого -->
+					<div id="trigger-effects">
+						<button data-effect="effectMove1" class="navigation__switchBurger"><span></span></button>
+						<div class="menu__logo">
+		    				<img width="100" src="img/PONOS/wfp.png" />
+		  				</div>
+						<div class="menu__logoPONOS">
+		    				<img width="200" src="img/PONOS/LOGO.png" />
+		  				</div>	
+					</div>
+
+				
+		</header>
+		<div class="content">
+
+			<div class="dashboardTitle">
+				<div class="title">DASHBOARD</div>
+			</div>
+
+			<div class="dashboard">
+				<div class="content__common content__section_build">
+					<img width="130" class="content__img" src="img/PONOS/dashboard_1.png" />
+					<br>
+					BUILD
+				</div>
+				<div class="content__common content__section_onlineStore">
+					<img width="130" class="content__img" src="img/PONOS/dashboard_2.png" />
+					<br>
+					ONLINE STORE
+				</div>
+				<div class="content__common content__section_myFarm">
+					<img width="130" class="content__img" src="img/PONOS/dashboard_3.png" />
+					<br>
+					MY FARM
+				</div>
+				<div class="content__common content__section_messages">
+					<img width="130" class="content__img" src="img/PONOS/dashboard_4.png" />
+					<br>
+					MESSEGES
+				</div>
+			</div>
+
+			<div class="sellSupplies">
+				<a href="#"><div class="content__link">SELL SUPPLIES</div></a>
+			</div>
+		</div>
+	</div>
+<script src="js/classie.js"></script>
+<script src="js/sidebarEffects.js"></script>
+</body>
+</html>
